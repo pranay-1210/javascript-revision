@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Executing JS</title>
+    <script>
+        console.log("Hello, World!");
+        function clickMe() {
+            document.getElementById("my-para").innerHTML = "You clicked the button";
+        }
+        function styleMe() {
+            document.getElementById("my-para").style.color = "red";
+        }
+    </script>
+</head>
+<body>
+    <h1>Welcome to JS world</h1>
+    <p id="my-para">This is a paragraph</p>
+    <button onclick="clickMe()">Click Me</button>
+    <button onclick="styleMe()">Click Me</button>
+
+</body>
+</html>

@@ -5,14 +5,68 @@
     <link rel="stylesheet" href="rock-paper-scissors.css">
 </head>
 <body>
-    <h1>Rock Paper Scissors Game</h1>
-    <p>Click one of the following buttons to play the game:</p>
-    <button class="choice-button" onclick="
-    document.querySelector('#result').innerHTML='You choose✊Rock.'">Rock✊</button>
-    <button class="choice-button" onclick="
-    document.querySelector('#result').innerHTML='You choose🤚Paper.'">Paper🤚</button>
-    <button class="choice-button" onclick="
-    document.querySelector('#result').innerHTML='You choose✌Scissors.'">Scissors✌</button>
-    <h4 id="result"></h4>
+
+<h1>Rock Paper Scissors Game</h1>
+<p>Click one of the following buttons to play the game:</p>
+
+<button class="choice-button" onclick="
+var computerChoice = Math.floor(Math.random() * 3) + 1;
+var computerChoiceText;
+
+if (computerChoice === 1) {
+    computerChoiceText = 'Computer choose ✊ Rock.';
+} else if (computerChoice === 2) {
+    computerChoiceText = 'Computer choose 🤚 Paper.';
+} else {
+    computerChoiceText = 'Computer choose ✌ Scissors.';
+}
+
+document.querySelector('#result').innerHTML =
+`You choose ✊ Rock.<br>
+${computerChoiceText}`
+">
+Rock ✊
+</button>
+
+<button class="choice-button" onclick="
+var computerChoice = Math.floor(Math.random() * 3) + 1;
+var computerChoiceText;
+
+if (computerChoice === 1) {
+    computerChoiceText = 'Computer choose ✊ Rock.';
+} else if (computerChoice === 2) {
+    computerChoiceText = 'Computer choose 🤚 Paper.';
+} else {
+    computerChoiceText = 'Computer choose ✌ Scissors.';
+}
+
+document.querySelector('#result').innerHTML =
+`You choose 🤚 Paper.<br>
+${computerChoiceText}`
+">
+Paper 🤚
+</button>
+
+<button class="choice-button" onclick="
+var computerChoice = Math.floor(Math.random() * 3) + 1;
+var computerChoiceText;
+
+if (computerChoice === 1) {
+    computerChoiceText = 'Computer choose ✊ Rock.';
+} else if (computerChoice === 2) {
+    computerChoiceText = 'Computer choose 🤚 Paper.';
+} else {
+    computerChoiceText = 'Computer choose ✌ Scissors.';
+}
+
+document.querySelector('#result').innerHTML =
+`You choose ✌ Scissors.<br>
+${computerChoiceText}`
+">
+Scissors ✌
+</button>
+
+<h4 id="result"></h4>
+
 </body>
 </html>
